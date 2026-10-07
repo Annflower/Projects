@@ -3,8 +3,8 @@
 Определение языка текста (русский/английский).
 
 Использует:
-- Словари слов
-- Процент совпадений
+- Словари слов (опционально)
+- Процент совпадений букв (основной метод)
 """
 
 import string
@@ -74,13 +74,15 @@ def get_language_count(message, dictionary, allowed_letters):
     return (float(matches) / len(possible_words)) * 100
 
 
-def is_english(message, word_percentage=20, letter_percentage=60):
+def is_english(message, letter_percentage=60):
     """
     Проверяет, является ли текст английским.
 
+    Алгоритм: подсчитывает процент английских букв в тексте.
+    Если процент >= 60% — текст считается английским.
+
     Args:
         message: Текст
-        word_percentage: Минимальный процент английских слов
         letter_percentage: Минимальный процент английских букв
 
     Returns:
@@ -89,24 +91,27 @@ def is_english(message, word_percentage=20, letter_percentage=60):
     if not message.strip():
         return False
 
-    word_match = get_language_count(message, ENGLISH_DICTIONARY, ENGLISH_LETTERS)
-    clean_message = remove_non_letters(message, ENGLISH_LETTERS)
+    english_letters = "abcdefghijklmnopqrstuvwxyz"
+    total_letters = sum(1 for char in message.lower() if char.isalpha())
 
-    if len(message) == 0:
+    if total_letters == 0:
         return False
 
-    letter_match = (len(clean_message) / len(message)) * 100
+    english_chars = sum(1 for char in message.lower() if char in english_letters)
+    letter_match = (english_chars / total_letters) * 100
 
-    return word_match >= word_percentage and letter_match >= letter_percentage
+    return letter_match >= letter_percentage
 
 
-def is_russian(message, word_percentage=20, letter_percentage=60):
+def is_russian(message, letter_percentage=60):
     """
     Проверяет, является ли текст русским.
 
+    Алгоритм: подсчитывает процент русских букв в тексте.
+    Если процент >= 60% — текст считается русским.
+
     Args:
         message: Текст
-        word_percentage: Минимальный процент русских слов
         letter_percentage: Минимальный процент русских букв
 
     Returns:
@@ -115,14 +120,14 @@ def is_russian(message, word_percentage=20, letter_percentage=60):
     if not message.strip():
         return False
 
-    # Если в тексте есть русские буквы — считаем русским
     russian_letters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
-    russian_chars = sum(1 for char in message.lower() if char in russian_letters)
+    total_letters = sum(1 for char in message.lower() if char.isalpha())
 
-    if len(message) == 0:
+    if total_letters == 0:
         return False
 
-    letter_match = (russian_chars / len(message)) * 100
+    russian_chars = sum(1 for char in message.lower() if char in russian_letters)
+    letter_match = (russian_chars / total_letters) * 100
 
     return letter_match >= letter_percentage
 
