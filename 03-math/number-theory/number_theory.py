@@ -399,6 +399,8 @@ def phi_function_r(num):
     """
     if num <= 0:
         return None
+    if num == 1:
+        return 1
     return len(reduced_residue_system(num))
 
 
