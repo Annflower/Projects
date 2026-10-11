@@ -14,15 +14,6 @@ env/
 .vscode/
 .idea/
 
-# OS
-.DS_Store
-Thumbs.db
-02-data-analysis/supply-chain/notebooks/credit.png
-02-data-analysis/supply-chain/notebooks/gantt.png
-02-data-analysis/supply-chain/notebooks/otchet.xlsx
-02-data-analysis/supply-chain/notebooks/raspredelenie.xlsx
-02-data-analysis/supply-chain/notebooks/resursy_po_dnyam.xlsx
-02-data-analysis/supply-chain/notebooks/resursy.png
 02-data-analysis/supply-chain/notebooks/output/credit_max.png
 02-data-analysis/supply-chain/notebooks/output/credit_norm.png
 02-data-analysis/supply-chain/notebooks/output/gantt.png
@@ -41,8 +32,4 @@ Thumbs.db
 02-data-analysis/supply-chain/notebooks/output/resursy_9.png
 02-data-analysis/supply-chain/notebooks/output/resursy_9.xlsx
 02-data-analysis/supply-chain/notebooks/output/resursy_10.png
-02-data-analysis/supply-chain/notebooks/output/resursy_10.xlsx
-03-math/сетевое_планирование/сетевое_планирование..ipynb
-02-data-analysis/supply-chain/notebooks/output/resursy_9.xlsx
-02-data-analysis/supply-chain/notebooks/output/resursy_9.png
 02-data-analysis/supply-chain/notebooks/output/resursy_10.xlsx
