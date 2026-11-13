@@ -1,0 +1,30 @@
+- [Исходное задание](overall-task.md)
+- [Вопросы заказчику](in_progress/open-questions.md)
+- Требования
+  - [Описание системы и PDOM](requirements/overview.md)
+  - [Пользовательские истории и критерии приёмки](requirements/user_stories.md)
+  - [Функциональная спецификация](requirements/functional-specification.md)
+  - [Функциональная модель](requirements/functional-model.md)
+- Проектирование
+  - [Архитектура](design/architecture.md)
+  - [Схема базы данных](design/database-schema.md)
+- Встречи
+  - [21.10.2026](meetings/2026-10-21/summary.md)
+  - [26.10.2026](meetings/2026-10-26/summary.md)
+- Отчёты
+  - [Отчёт заказчику](reports/report_1_week.md)
+  - [План проекта, роли и процесс команды](archive/project_plan.md)
+- В работе
+  - [Сравнение LLM-провайдеров](in_progress/architecture.md)
+  - [Функциональные требования](in_progress/functional_reqs.md)
+  - [Нефункциональные требования](in_progress/nonfunctional_reqs.md)
+  - [Обзор готовых решений](in_progress/research/review.md)
+- Диаграммы
+  - [PDOM](diagrams/pdom.svg)
+  - [Варианты использования: источники](diagrams/use-cases-sources.svg)
+  - [Варианты использования: подписки](diagrams/use-cases-subscriptions.svg)
+  - [Варианты использования: подготовка сводок](diagrams/use-cases-generation.svg)
+  - [Варианты использования: история](diagrams/use-cases-history.svg)
+  - [IDEF0: контекстная диаграмма](diagrams/idef0-context.svg)
+  - [IDEF0: дерево декомпозиции](diagrams/idef0-decomposition-tree.svg)
+  - [Схема базы данных](diagrams/database-schema.svg)
