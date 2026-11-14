@@ -1,0 +1,15 @@
+# Анализ данных
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.13
+scipy>=1.10
+
+# Jupyter / ноутбук
+nbformat>=5.0
+nbconvert>=7.0
+ipykernel>=6.0
+
+# Интерактивный дашборд
+streamlit>=1.30
+plotly>=5.18
